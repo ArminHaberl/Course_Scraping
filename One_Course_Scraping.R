@@ -1,6 +1,3 @@
-setwd("/Users/arminhaberl/Documents/Privat/Uni/MASTER/Data Management") #Adapt accordingly
-
-
 require(httr)
 library(tidyverse)
 
