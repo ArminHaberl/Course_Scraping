@@ -96,7 +96,3 @@ scrape_data <- function(course_id){
   
   return(new_course)
   }
-
-#Test code here
-
-#asdf <- scrape_data("753136")
