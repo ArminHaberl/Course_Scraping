@@ -50,12 +50,12 @@ for (term_ID in term_IDs){
   all_course_IDs <<- c(all_course_IDs,course_IDs)
 }
 
-course_information <- tibble()
+dataframe_courses <- tibble()
 
 for (course_ID in all_course_IDs){
   new_course <- scrape_data(course_ID)
-  course_information <<- bind_rows(course_information,new_course)
+  dataframe_courses <<- bind_rows(dataframe_courses,new_course)
   Sys.sleep(0.1)
 }
   
-write_xlsx(course_information,"courses.xlsx")
+write_xlsx(dataframe_courses,"courses.xlsx")
