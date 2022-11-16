@@ -45,7 +45,7 @@ get_course_IDs <- function(term_ID){
 
 term_IDs <- get_term_IDs()
 all_course_IDs <- c()
-for (term_ID in term_IDs){
+for (term_ID in term_IDs[3:4]){
   course_IDs <- get_course_IDs(term_ID)
   all_course_IDs <<- c(all_course_IDs,course_IDs)
 }
