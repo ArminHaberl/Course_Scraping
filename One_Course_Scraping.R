@@ -52,6 +52,7 @@ scrape_data <- function(course_id){
   try(semesterhours <- course_details[["cpCourseDto"]][["courseNormConfigs"]][[1]][["value"]],silent = TRUE)
   if (is.null(semesterhours)) { semesterhours <- NA}
   
+  teacher_list <- list()
   try(teacher_list <- course_details[["cpCourseDto"]][["lectureships"]],silent = TRUE)
   teachers <- ""
   for (teacher in teacher_list) {
