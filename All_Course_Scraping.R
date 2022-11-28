@@ -53,8 +53,8 @@ for (term_ID in term_IDs[3:4]){
 dataframe_courses <- tibble()
 
 for (course_ID in all_course_IDs){
-  new_course <- scrape_data(course_ID)
-  dataframe_courses <<- bind_rows(dataframe_courses,new_course)
+  try(new_course <- scrape_data(course_ID), silent = TRUE)
+  try(dataframe_courses <<- bind_rows(dataframe_courses,new_course), silent = TRUE)
   Sys.sleep(0.1)
 }
   
